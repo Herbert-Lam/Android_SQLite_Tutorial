@@ -15,3 +15,6 @@ The following key Android topics are used in the app:
 - Alternative methods (in the comment section) for updating/deleting a record without using SQL query
 - Neat UI by using ConstraintLayout
 - Intent
+
+Output video:
+https://user-images.githubusercontent.com/103217937/180594558-b93e794e-122d-473d-97d7-bd75e2eae8bb.mp4
