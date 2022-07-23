@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String[]> outputAL;
 
     //Create the database variable and int id which will be used across two activities
-    public static com.example.lab3sqlitetutorial_300345759.BirthWeightDB bwDB;
+    public static BirthWeightDB bwDB;
     public static int id;
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         tl = findViewById(R.id.tl);
 
         //Create a concrete database object
-        bwDB = new com.example.lab3sqlitetutorial_300345759.BirthWeightDB(this);
+        bwDB = new BirthWeightDB(this);
 
         //To load and display the database when launching the MainActivity from SecondActivity
         if(getIntent().getExtras() != null){
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Create a textview to display a message about no data
             TextView txvNoData = new TextView(this);
-            txvNoData.setText("There are no data yet.");
+            txvNoData.setText("There is no data yet.");
             txvNoData.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             txvNoData.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
 
