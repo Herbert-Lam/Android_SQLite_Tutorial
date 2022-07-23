@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Android SQLite Tutorial</string>
+    <string name="birth_weight_database">Birth Weight Database</string>
+    <string name="enter_the_name">Enter the name</string>
+    <string name="enter_the_weight_pound">Enter the weight (Pound)</string>
+    <string name="add">Add</string>
+    <string name="clear">Clear</string>
+    <string name="load_data">Load Data</string>
+    <string name="delete_all">Delete ALL</string>
+    <string name="please_click_the_record_below_to_update_delete_record">Please click the record below to update/delete record</string>
+    <string name="please_enter_the_name">Please enter the name</string>
+    <string name="please_enter_the_weight">Please enter the weight</string>
+    <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
+</resources>
