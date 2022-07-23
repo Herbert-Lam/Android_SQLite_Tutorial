@@ -1,4 +1,4 @@
-package com.example.lab3sqlitetutorial_300345759;
+package com.example.androidsqlitetutorial;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -93,8 +93,8 @@ public class BirthWeightDB extends SQLiteOpenHelper {
         //Make the database writable
         birthWeightDB = getWritableDatabase();
         //Update the record to the database by executing the SQL UPDATE query with WHERE clause
-        birthWeightDB.execSQL("UPDATE " + DB_TABLE + " SET Infant_Name = \'" + newName + "\', Infant_Weight = \'"
-                + newWeight + "\' WHERE _id=" + id + ";");
+        birthWeightDB.execSQL("UPDATE " + DB_TABLE + " SET Infant_Name = '" + newName + "', Infant_Weight = '"
+                + newWeight + "' WHERE _id=" + id + ";");
 
         //Here is another non-SQL way to update an record
 
