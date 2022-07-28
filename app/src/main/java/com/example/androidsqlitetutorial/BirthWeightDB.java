@@ -48,10 +48,10 @@ public class BirthWeightDB extends SQLiteOpenHelper {
         birthWeightDB.execSQL("INSERT INTO " + DB_TABLE + " (Infant_Name, Infant_Weight) VALUES ('" + name + "','" + weight + "');");
     }
 
-    //Create a method to return an ArrayList<String[]> with the records from the database
-    public ArrayList<String[]> loadData(){
+    //Create a method to return an ArrayList<Infant> with the records from the database
+    public ArrayList<Infant> loadData(){
 
-        ArrayList<String[]> record = new ArrayList<>();
+        ArrayList<Infant> record = new ArrayList<>();
 
         //Make the database readable
         birthWeightDB = getReadableDatabase();
@@ -63,10 +63,10 @@ public class BirthWeightDB extends SQLiteOpenHelper {
         //Read every record and store the corresponding values to the arrayList
         while (cr.moveToNext()){
             int id = cr.getInt(0);
-            String idxStr = String.valueOf(id);
             String nameStr = cr.getString(1);
             String weightStr = cr.getString(2);
-            record.add(new String[]{idxStr, nameStr, weightStr});
+            Infant infant = new Infant(id, nameStr, weightStr);
+            record.add(infant);
         }
 
         //Close the cursor

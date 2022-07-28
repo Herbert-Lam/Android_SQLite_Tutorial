@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etWeight;
     private TableLayout tl;
 
-    //Create an ArrayList<String[]> to store the data from the database and display the data in the views
-    private ArrayList<String[]> outputAL;
+    //Create an ArrayList<Infant> to store the infant object from the database and display the data in the views
+    private ArrayList<Infant> outputAL;
 
     //Create the database variable and int id which will be used across two activities
     public static BirthWeightDB bwDB;
@@ -125,14 +125,14 @@ public class MainActivity extends AppCompatActivity {
                 //Create two textviews for the fields of each record
                 TextView txv1 = new TextView(this);
                 //Read the first field from the ArrayList. ([0] is the id column)
-                String s1 = outputAL.get(i)[1];
-                txv1.setText(s1);
+                String nameStr = outputAL.get(i).getName();
+                txv1.setText(nameStr);
                 txv1.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 4f));
 
                 TextView txv2 = new TextView(this);
                 //Read the second field from the ArrayList
-                String s2 = outputAL.get(i)[2];
-                txv2.setText(s2);
+                String weightStr = outputAL.get(i).getWeight();
+                txv2.setText(weightStr);
                 txv2.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1f));
 
                 //Insert the two textviews into each table row
@@ -165,16 +165,16 @@ public class MainActivity extends AppCompatActivity {
             //Refer which table row is clicked
             int idx = v.getId();
             //Get the id from the ArrayList for modifying/deleting a record in the database
-            id = Integer.parseInt(outputAL.get(idx)[0]);
+            id = outputAL.get(idx).getId();
 
             //Get the field values of the selected table row for user to recognize which row is selected
-            String s1 = outputAL.get(idx)[1];
-            String s2 = outputAL.get(idx)[2];
+            String nameStr = outputAL.get(idx).getName();
+            String weightStr = outputAL.get(idx).getWeight();
 
             //Store the values into the intent
             intent1.putExtra("id", id);
-            intent1.putExtra("name", s1);
-            intent1.putExtra("weight", s2);
+            intent1.putExtra("name", nameStr);
+            intent1.putExtra("weight", weightStr);
 
             //Jump to SecondActivity
             startActivity(intent1);
