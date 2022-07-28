@@ -6,6 +6,7 @@ I spent around 12 hours to complete this lab assignment.
 This lab assignment requires me to create a tutorial on Android SQLite that explains the related concepts including defining a schema and CRUD (create, read, update and delete) processes in a database.
 A short output video is included in this repository.
 The topic of the database is a simple birth weight database. I use two columns, Infant_Name and Infant-Weight, only for the ease of SQLite demonstration.
+You may clone the project and open it in the Android Studio.
 
 The following key Android topics are used in the app:
 - Creation of own database class which inherits SQLiteOpenHelper class
